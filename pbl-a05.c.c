@@ -2,6 +2,7 @@
 
 #include <stdio.h>
 #include <conio.h>
+#include <stdlib.h>
 
 
 int kl[100], gt[100], n, klmax;
@@ -12,21 +13,26 @@ FILE *fp;
 void menu()
 {
 
-  printf("\t\t******************************************\n");
-  printf("\t\t*****        BAI TOAN CAI TUI        *****\n");
-  printf("\t\t******************************************\n");
+  printf("\n");
+  printf("\n    ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»");
+  printf("\n    º                  BAI TOAN CAI TUI                   º");
+  printf("\n    ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼");
   printf("\t\t            \n");
-  printf("\t\t******************************************\n");
-  printf("\t\t*           Cach thuc hoat dong          *\n");
-  printf("\t\t*                                        *\n");
-  printf("\t\t*                                        *\n");
-  printf("\t\t*    Buoc 1:Nhap du lieu                 *\n");
-  printf("\t\t*      Chon 1: de nhap tu ban phim       *\n");
-  printf("\t\t*      Chon 2: de lay du lieu tu file    *\n");
-  printf("\t\t*    Buoc 2: Chon cach lay               *\n");
-  printf("\t\t*      Chon 3: de lay moi vat nhieu lan  *\n");
-  printf("\t\t*      Chon 4: de lay moi vat 1 lan      *\n");
-  printf("\t\t******************************************\n\n\n");
+  printf("\n    ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»");
+  printf("\n    º                                                     º ");
+  printf("\n    º                 Cach thuc hoat dong                 º");
+  printf("\n    º                                                     º ");
+  printf("\n    º                                                     º");
+  printf("\n    º        Buoc 1:Nhap du lieu                          º");
+  printf("\n    º          Chon 1: de nhap tu ban phim                º");
+  printf("\n    º          Chon 2: de lay du lieu tu file             º");
+  printf("\n    º        Buoc 2: Chon cach lay                        º");
+  printf("\n    º          Chon 3: de lay moi vat nhieu lan           º");
+  printf("\n    º          Chon 4: de lay moi vat 1 lan               º");
+  printf("\n    º                                                     º");
+  printf("\n    ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼");
+  	
+		printf("\n");
 
   printf("\t\t\t  #Nhan enter de bat dau!\n");
   getch();
@@ -281,11 +287,53 @@ int TH2(int n, int klmax, int kl[], int gt[])
   }
   fclose(fp2);
 }
-
+//ham clrscr
+void clrscr()
+{
+    system("@cls||clear");
+}
+//ham thoát
+void exit0()
+{    
+    char sl; 
+	printf("\nBan co muon thoat khoi chuong trinh (y/n)? ");
+	fflush(stdin);
+  scanf("%c", &sl);
+  if (sl == 'y') 
+  { 
+   clrscr();
+   printf("\n\t\t Cam on ban da su dung chuong trinh!");
+   printf("\n\t\t Hen gap lai lan sau!");
+   exit(0); 
+  }
+	 
+ } 
 // hàm main()
 int main()
 {
   //C:\Users\HONG TRUONG\Desktop
+  printf("\n    ÉÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ»");
+  printf("\n    º                                                      º ");
+  printf("\n    º              KHOA CONG NGHE THONG TIN                º");
+  printf("\n    º            ____________________________              º ");
+  printf("\n    º                                                      º ");
+  printf("\n    º             DO AN LAP TRINH TINH TOAN                º");
+  printf("\n    º              DE TAI BAI TOAN CAI TUI                 º");
+  printf("\n    º                                                      º ");
+  printf("\n    º          GIANG VIEN HUONG DAN                        º");
+  printf("\n    º              TS  Vo Duc Hoang                        º");
+  printf("\n    º          Sinh vien thuc hien                         º");
+  printf("\n    º              Nguyen Hong Truong -20TCLC-DT2          º");
+  printf("\n    º              Duong Minh Duc -20TCLC-DT2              º");
+  printf("\n    º                                                      º");
+  printf("\n    ÈÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¼");
+  getch();
+  clrscr();
+  
+ do
+  
+  {
+    
   menu();
   int ch, key;
   key = 1;
@@ -341,7 +389,9 @@ int main()
     else
       TH1(n, klmax, kl, gt);
   }
-
+  exit0();
+  clrscr(); 
+} while (1) ;
   fclose(fp);
   getch();
   
